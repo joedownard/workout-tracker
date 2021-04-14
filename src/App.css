@@ -1,38 +1,68 @@
-.App {
-  text-align: center;
+#root {
+    scroll-snap-type: y mandatory;
+    -webkit-scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    height: 100vh;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.exercisePage {
+    scroll-snap-align: start;
+    height: 100vh;
+    margin-right: 8vw;
+    margin-left: 8vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.timer {
+    text-align: center;
+    font-size: 2vh;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.nextSetReminder{
+    text-align: center;
+    font-size: 2vh;
+    min-height: 2vh;
+    max-height: 2vh;
 }
 
-.App-link {
-  color: #61dafb;
+.mainContent {
+    margin-bottom: 20vh;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.set {
+    align-self: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.setDescriptor {
+    margin-right: 4vw;
+}
+
+.checkbox {
+    transform: scale(2);
+    height: 5vh;
+    margin-right: 6vw;
+}
+
+.notes {
+    margin-top: 5vh;
+}
+
+.previousExerciseName {
+    font-size: 3vw;
+    text-align: center;
+}
+
+.exerciseName {
+    text-align: center;
+    font-size: 5vw;
+}
+
+.nextExerciseName {
+    font-size: 3vw;
+    text-align: center;
 }
