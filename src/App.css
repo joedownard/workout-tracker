@@ -5,6 +5,14 @@
     height: 100vh;
 }
 
+.topBar {
+    margin-top: 2vh;
+}
+
+.bottomBar {
+    margin-bottom: 2vh;
+}
+
 .exercisePage {
     scroll-snap-align: start;
     height: 100vh;
@@ -43,8 +51,6 @@
 }
 
 .checkbox {
-    transform: scale(2);
-    height: 5vh;
     margin-right: 6vw;
 }
 

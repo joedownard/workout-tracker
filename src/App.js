@@ -1,5 +1,6 @@
 import './App.css';
 import {useState} from "react";
+import { Checkbox } from '@material-ui/core';
 
 function App() {
     let week = 0
@@ -62,7 +63,7 @@ function App() {
 
 function Exercise(props) {
 
-    const [timer, setTimer] = useState(0)
+    const [time, setTime] = useState(0)
     const [timerInterval, setTimerInterval] = useState()
 
     function startTimer () {
@@ -70,11 +71,9 @@ function Exercise(props) {
             clearInterval(timerInterval)
             setTimerInterval()
         }
-        let time = 0
-        setTimer(0)
+        const date = new Date()
         const incrementTimer = setInterval(() => {
-            time += 1
-            setTimer(time)
+            setTime(((new Date().getTime()) - date.getTime())/1000)
         }, 1000)
         setTimerInterval(incrementTimer)
     }
@@ -84,7 +83,7 @@ function Exercise(props) {
             clearInterval(timerInterval)
             setTimerInterval()
         }
-        setTimer(0)
+        setTime(0)
     }
 
     let previousName = props.pageNumber !== 1 ? "⬆ " + props.dayProgram[props.pageNumber - 2].name : ""
@@ -97,8 +96,8 @@ function Exercise(props) {
         <section className="exercisePage">
             <div className="topBar">
                 <p className="previousExerciseName">{previousName}</p>
-                <p className="timer">RESTING TIME: {new Date(timer * 1000).toISOString().substr(15, 4)}m</p>
-                <p className="nextSetReminder">{timer > 180 ? "START NEXT SET!" : ""}</p>
+                <p className="timer">RESTING TIME: {new Date(time * 1000).toISOString().substr(15, 4)}m</p>
+                <p className="nextSetReminder">{time > 180 ? "START NEXT SET!" : ""}</p>
             </div>
 
             <div className="mainContent">
@@ -129,7 +128,7 @@ function Set(props) {
     }
 
     return (<div className="set">
-        <input className="checkbox" type="checkbox" id={"set" + props.id} onClick={handleCheck}/>
+        <Checkbox className="checkbox" type="checkbox" id={"set" + props.id} onClick={handleCheck} size="medium"/>
         <p className="setDescriptor">Reps: {props.reps}</p>
         <p className="setDescriptor">RPE: {props.RPE}</p>
         <p className="setDescriptor">Weight: {props.weight}</p>
