@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/workout-tracker/static/css/main.072c3aa1.chunk.css",
+    "main.css": "/workout-tracker/static/css/main.1b80919d.chunk.css",
     "main.js": "/workout-tracker/static/js/main.185ea46f.chunk.js",
     "main.js.map": "/workout-tracker/static/js/main.185ea46f.chunk.js.map",
     "runtime-main.js": "/workout-tracker/static/js/runtime-main.50b7b48b.js",
@@ -10,13 +10,13 @@
     "static/js/3.93a280e9.chunk.js": "/workout-tracker/static/js/3.93a280e9.chunk.js",
     "static/js/3.93a280e9.chunk.js.map": "/workout-tracker/static/js/3.93a280e9.chunk.js.map",
     "index.html": "/workout-tracker/index.html",
-    "static/css/main.072c3aa1.chunk.css.map": "/workout-tracker/static/css/main.072c3aa1.chunk.css.map",
+    "static/css/main.1b80919d.chunk.css.map": "/workout-tracker/static/css/main.1b80919d.chunk.css.map",
     "static/js/2.74de3b4b.chunk.js.LICENSE.txt": "/workout-tracker/static/js/2.74de3b4b.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.50b7b48b.js",
     "static/js/2.74de3b4b.chunk.js",
-    "static/css/main.072c3aa1.chunk.css",
+    "static/css/main.1b80919d.chunk.css",
     "static/js/main.185ea46f.chunk.js"
   ]
 }
