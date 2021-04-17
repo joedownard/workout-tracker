@@ -5,6 +5,32 @@
     height: 100vh;
 }
 
+.DayWeekSelectionPage{
+    scroll-snap-align: start;
+    height:100vh;
+    min-height: 100vh;
+}
+
+.dayWeekContainer{
+    margin: 2vh 4vw;
+}
+
+.dayWeekButton {
+    font-size: 7vw;
+    margin-left: 6vw;
+}
+
+.dayWeekButtonSelected {
+    background-color: grey;
+    font-size: 7vw;
+    margin-left: 6vw;
+}
+
+.promptHeader{
+    margin-top: 4vh;
+    text-align: center;
+}
+
 .topBar {
     margin-top: 2vh;
 }
