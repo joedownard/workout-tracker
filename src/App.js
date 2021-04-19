@@ -4,7 +4,7 @@ import {Checkbox} from '@material-ui/core';
 
 function App() {
     const [week, setWeek] = useState(0)
-    const [day, setDay] = useState(4)
+    const [day, setDay] = useState(0)
 
     const program = [[[{
         name: "Back Squat",
@@ -186,7 +186,41 @@ function App() {
                 RPE: "9",
                 weight: 20
             },]
-        },],]]
+        },]],
+        [[{
+            name: "BARBELL BENCH PRESS",
+            notes: "TOP SET. LEAVE ~2 REPS IN THE TANK. HARD SET.",
+            sets: [{reps: 2, RPE: "90%", weight: 70}]
+        },{
+            name: "BARBELL BENCH PRESS",
+            notes: "SET UP A COMFORTABLE ARCH, SLIGHT PAUSE ON THE CHEST, EXPLODE UP",
+            sets: [{reps: 6, RPE: "77.5%", weight: 60},{reps: 6, RPE: "77.5%", weight: 60},{reps: 6, RPE: "77.5%", weight: 60},]
+        },{
+            name: "CHIN-UP",
+            notes: "UNDERHAND GRIP, PULL YOUR CHEST TO THE BAR, ADD WEIGHT IF NEEDED TO HIT RPE",
+            sets: [{reps: 10, RPE: "8", weight: 0},]
+        },{
+            name: "STANDING ARNOLD DUMBBELL PRESS",
+            notes: "ROTATE THE DBS IN AT THE BOTTOM AND OUT AT THE TOP",
+            sets: [{reps: 10, RPE: "9", weight: 17.5},]
+        },{
+            name: "CHEST-SUPPORTED DUMBBELL ROW",
+            notes: "LIE ON AN INCLINE BENCH AND DO ROWS - PULL WITH LATS!",
+            sets: [{reps: 12, RPE: "9", weight: 20},]
+        },{
+            name: "FACE PULL",
+            notes: "CAN USE CABLE/ROPE OR BAND, RETRACT YOUR SHOULDER BLADES AS YOU PULL",
+            sets: [{reps: 15, RPE: "9", weight: 35},]
+        },{
+            name: "DUMBBELL LATERAL RAISE",
+            notes: "ARC THE DUMBBELL OUT, MIND-MUSCLE CONNECTION WITH MIDDLE FIBERS",
+            sets: [{reps: 15, RPE: "10", weight: 10},]
+        },{
+            name: "CONCENTRATION BICEP CURL",
+            notes: "PIN YOUR ELBOW AGAINST YOUR UPPER LEG OR THE BACK OF A BENCH",
+            sets: [{reps: 12, RPE: "9", weight: 15},]
+        },]]
+    ]
     const exerciseList = program[week][day].map((exercise, index) => <Exercise dayProgram={program[week][day]}
                                                                                key={index} pageNumber={index + 1}/>)
     return (
