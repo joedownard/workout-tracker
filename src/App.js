@@ -1,264 +1,238 @@
 import './App.css';
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import {Checkbox} from '@material-ui/core';
 
 function App() {
-    const [week, setWeek] = useState(0)
-    const [day, setDay] = useState(0)
-
-    const program = [[[{
-        name: "Back Squat",
-        notes: "FOCUS ON TECHNIQUE AND EXPLOSIVE POWER!",
-        sets: [{reps: 5, RPE: "80%", weight: 70}]
-    }, {
-        name: "Back Squat",
-        notes: "KEEP BACK ANGLE AND FORM CONSISTENT ACROSS ALL REPS",
-        sets: [{reps: 8, RPE: "70%", weight: 60}, {reps: 8, RPE: "70%", weight: 60}]
-    }, {
-        name: "Overhead Press",
-        notes: "RESET EACH REP (DON'T TOUCH-AND-PRESS)",
-        sets: [{reps: 8, RPE: "80%", weight: 40}, {reps: 8, RPE: "80%", weight: 40}, {reps: 8, RPE: "80%", weight: 40}]
-    }, {
-        name: "Lying Leg Curl",
-        notes: "FOCUS ON SQUEEZING GLUTES",
-        sets: [{reps: 8, RPE: "7", weight: 40}, {reps: 8, RPE: "7", weight: 40}, {reps: 8, RPE: "7", weight: 40}]
-    }, {
-        name: "Helms Row",
-        notes: "STRICT FORM. DRIVE ELBOWS OUT AND BACK AT 45 DEGREE ANGLE",
-        sets: [{reps: 12, RPE: "9", weight: 20}, {reps: 12, RPE: "9", weight: 20}, {reps: 12, RPE: "9", weight: 20}]
-    }, {
-        name: "Hammer Curl",
-        notes: "KEEP ELBOWS LOCKED IN PLACE, SQUEEZE THE DUMBBELL HANDLE HARD!",
-        sets: [{reps: 20, RPE: "10", weight: 15}, {reps: 20, RPE: "10", weight: 15}, {reps: 20, RPE: "10", weight: 15}]
-    },],
+    const [program, setProgram] = useState([
         [{
-            name: "DEADLIFT",
-            notes: "CONVENTIONAL OR SUMO: USE WHATEVER STANCE YOU ARE STRONGER WITH",
-            sets: [{reps: 4, RPE: "80%", weight: 100}, {reps: 4, RPE: "80%", weight: 100}, {
-                reps: 4,
-                RPE: "80%",
-                weight: 100
-            }]
-        }, {
-            name: "BARBELL BENCH PRESS",
-            notes: "TOP SET. LEAVE 1 (MAYBE 2) REPS IN THE TANK. HARD SET.",
-            sets: [{reps: 3, RPE: "85%", weight: 60}]
-        }, {
-            name: "BARBELL BENCH PRESS",
-            notes: "QUICK 1 SECOND PAUSE ON THE CHEST ON EACH REP",
-            sets: [{reps: 10, RPE: "70%", weight: 50}, {reps: 10, RPE: "70%", weight: 50}]
-        }, {
-            name: "HIP ABDUCTION",
-            notes: "MACHINE, BAND OR WEIGHTED, 1 SECOND ISOMETRIC HOLD AT THE TOP OF EACH REP",
-            sets: [{reps: 15, RPE: "9", weight: 32}, {reps: 15, RPE: "9", weight: 32}, {reps: 15, RPE: "9", weight: 32}]
-        }, {
-            name: "WEIGHTED PULL-UP",
-            notes: "1.5X SHOULDER WIDTH GRIP, PULL YOUR CHEST TO THE BAR",
-            sets: [{reps: 5, RPE: "8", weight: 20}, {reps: 5, RPE: "8", weight: 20}, {reps: 5, RPE: "8", weight: 20}]
-        }, {
-            name: "STANDING CALF RAISE",
-            notes: "1-2 SECOND PAUSE AT THE BOTTOM OF EACH REP, FULL ROM",
-            sets: [{reps: 8, RPE: "9", weight: 100}, {reps: 8, RPE: "9", weight: 100}, {reps: 8, RPE: "9", weight: 100}]
-        },],
-        [{
-            name: "BACK SQUAT",
-            notes: "MAINTAIN TIGHT PRESSURE IN YOUR UPPER BACK AGAINST THE BAR",
-            sets: [{reps: 4, RPE: "80%", weight: 80}, {reps: 4, RPE: "80%", weight: 80}, {
-                reps: 4,
-                RPE: "80%",
+            name: "BEHIND THE LEG DEADLIFT",
+            notes: "LAST SET REST 15 SECONDS, DO ANOTHER 2-3 REPS, REST ANOTHER 15 SECONDS, DO ANOTHER 1-2 REPS",
+            sets: [{reps: 6, RPE: "n/a", weight: 80}, {reps: 6, RPE: "n/a", weight: 80}, {
+                reps: 6,
+                RPE: "n/a",
                 weight: 80
             },]
         }, {
-            name: "WEIGHTED DIP",
-            notes: "DO DUMBBELL FLOOR PRESS IF NO ACCESS TO DIP HANDLES",
-            sets: [{reps: 8, RPE: "8", weight: 20}, {reps: 8, RPE: "8", weight: 20}, {reps: 8, RPE: "8", weight: 20},]
-        }, {
-            name: "HANGING LEG RAISE",
-            notes: "KNEES TO CHEST, CONTROLLED REPS, STRAIGHTEN LEGS MORE TO INCREASE DIFFICULTY",
-            sets: [{reps: 10, RPE: "9", weight: 0}, {reps: 10, RPE: "9", weight: 0}, {reps: 10, RPE: "9", weight: 0},]
-        }, {
-            name: "DB PULL-OVER",
-            notes: "CAN USE A DB, CABLE/ROPE OR BAND, STRETCH AND SQUEEZE LATS!",
-            sets: [{reps: 12, RPE: "8", weight: 24}, {reps: 12, RPE: "8", weight: 24}, {
-                reps: 12,
-                RPE: "8",
-                weight: 24
+            name: "CLOSE-GRIP BENCH PRESS",
+            notes: "COMPLETE LAST SET, REST 15 SECONDS, DO ANOTHER 2-3 REPS, REST ANOTHER 15 SECONDS, DO ANOTHER 1-2 REPS",
+            sets: [{reps: 6, RPE: "n/a", weight: 70}, {reps: 6, RPE: "n/a", weight: 70}, {
+                reps: 6,
+                RPE: "n/a",
+                weight: 70
             },]
         }, {
-            name: "INCLINE DUMBBELL CURL",
-            notes: "DO EACH ARM ONE AT A TIME RATHER THAN ALTERNATING, START WITH YOUR WEAK ARM",
-            sets: [{reps: 12, RPE: "9", weight: 15}, {reps: 12, RPE: "9", weight: 15}, {
+            name: "DB INCLINE PRESS",
+            notes: "ON THE LAST SET DO SLOW ECCENTRICS, THEN HOLD THE STRETCH AFTER THE LAST REP FOR AS LONG AS POSSIBLE",
+            sets: [{reps: 8, RPE: "n/a", weight: 25}, {reps: 8, RPE: "n/a", weight: 25}, {
+                reps: 8,
+                RPE: "n/a",
+                weight: 25
+            },]
+        }, {
+            name: "DB LAT RAISE",
+            notes: "COMPLETE LAST SET, REST 15 SECONDS, THEN DO AS MANY SETS OF 3 AS POSSIBLE WITH 15 SECONDS OF REST BETWEEN",
+            sets: [{reps: 12, RPE: "n/a", weight: 10}, {reps: 12, RPE: "n/a", weight: 10}, {
                 reps: 12,
-                RPE: "9",
+                RPE: "n/a",
+                weight: 10
+            },]
+        }, {
+            name: "CALF RAISE",
+            notes: "COMPLETE LAST SET, REST 15 SECONDS, THEN DO AS MANY SETS OF 3 AS POSSIBLE WITH 15 SECONDS OF REST BETWEEN",
+            sets: [{reps: 10, RPE: "n/a", weight: 50}, {reps: 10, RPE: "n/a", weight: 50}, {
+                reps: 10,
+                RPE: "n/a",
+                weight: 50
+            },]
+        }],
+        [{
+            name: "DEADLIFT",
+            notes: "LAST SET REST 15 SECONDS, DO ANOTHER 2-3 REPS, REST ANOTHER 15 SECONDS, DO ANOTHER 1-2 REPS",
+            sets: [{reps: 6, RPE: "n/a", weight: 115}, {reps: 6, RPE: "n/a", weight: 115}, {
+                reps: 6,
+                RPE: "n/a",
+                weight: 115
+            },]
+        }, {
+            name: "DB PULLOVER",
+            notes: "ON THE LAST SET DO SLOW ECCENTRICS, THEN HOLD THE STRETCH AFTER THE LAST REP FOR AS LONG AS POSSIBLE",
+            sets: [{reps: 8, RPE: "n/a", weight: 27.5}, {reps: 8, RPE: "n/a", weight: 27.5}, {
+                reps: 8,
+                RPE: "n/a",
+                weight: 27.5
+            },]
+        }, {
+            name: "DB REAR DELT RAISE",
+            notes: "COMPLETE LAST SET, REST 15 SECONDS, THEN DO AS MANY SETS OF 3 AS POSSIBLE WITH 15 SECONDS OF REST BETWEEN",
+            sets: [{reps: 10, RPE: "n/a", weight: 15}, {reps: 10, RPE: "n/a", weight: 15}, {
+                reps: 10,
+                RPE: "n/a",
                 weight: 15
             },]
         }, {
-            name: "FACE PULL",
-            notes: "CAN USE CABLE/ROPE OR BAND, RETRACT YOUR SHOULDER BLADES AS YOU PULL",
-            sets: [{reps: 12, RPE: "9", weight: 40}, {reps: 12, RPE: "9", weight: 40}, {
-                reps: 12,
-                RPE: "9",
+            name: "EZ BAR CURL",
+            notes: "LAST SET REST 15 SECONDS, DO ANOTHER 2-3 REPS, REST ANOTHER 15 SECONDS, DO ANOTHER 1-2 REPS",
+            sets: [{reps: 6, RPE: "n/a", weight: 40}, {reps: 6, RPE: "n/a", weight: 40}, {
+                reps: 6,
+                RPE: "n/a",
                 weight: 40
-            }, {reps: 12, RPE: "9", weight: 40},]
-        },],
-        [{
-            name: "PAUSE DEADLIFT",
-            notes: "3 SECOND PAUSE RIGHT AFTER THE PLATES COME OFF THE GROUND",
-            sets: [{reps: 2, RPE: "75%", weight: 110}, {reps: 2, RPE: "75%", weight: 110}, {
-                reps: 2,
-                RPE: "75%",
-                weight: 110
-            }, {reps: 2, RPE: "75%", weight: 110},]
-        }, {
-            name: "PAUSE BARBELL BENCH PRESS",
-            notes: "2-3 SECOND PAUSE ON THE CHEST",
-            sets: [{reps: 5, RPE: "75%", weight: 60}, {reps: 5, RPE: "75%", weight: 60}, {
-                reps: 5,
-                RPE: "75%",
-                weight: 60
             },]
         }, {
-            name: "CHEST-SUPPORTED T-BAR ROW ",
-            notes: "BE MINDFUL OF LOWER BACK FATIGUE. STAY LIGHT, MINIMIZE CHEATING",
-            sets: [{reps: 10, RPE: "7", weight: 50}, {reps: 10, RPE: "7", weight: 50}, {
+            name: "FARMERS WALK",
+            notes: "COMPLETE LAST SET, REST 15 SECONDS, THEN DO AS MANY SETS OF 3 AS POSSIBLE WITH 15 SECONDS OF REST BETWEEN",
+            sets: [{reps: 10, RPE: "n/a", weight: 45}, {reps: 10, RPE: "n/a", weight: 45}, {
                 reps: 10,
-                RPE: "7",
+                RPE: "n/a",
+                weight: 45
+            },]
+        }],
+        [{
+            name: "MILITARY PRESS",
+            notes: "LAST SET REST 15 SECONDS, DO ANOTHER 2-3 REPS, REST ANOTHER 15 SECONDS, DO ANOTHER 1-2 REPS",
+            sets: [{reps: 6, RPE: "n/a", weight: 50}, {reps: 6, RPE: "n/a", weight: 50}, {
+                reps: 6,
+                RPE: "n/a",
+                weight: 50
+            },]
+        }, {
+            name: "BEHIND THE LEG DEADLIFT",
+            notes: "ON THE LAST SET DO SLOW ECCENTRICS, THEN HOLD THE STRETCH AFTER THE LAST REP FOR AS LONG AS POSSIBLE",
+            sets: [{reps: 8, RPE: "n/a", weight: 70}, {reps: 8, RPE: "n/a", weight: 70}, {
+                reps: 8,
+                RPE: "n/a",
+                weight: 70
+            },]
+        }, {
+            name: "EZ BAR SKULLCRUSHER",
+            notes: "ON THE LAST SET DO SLOW ECCENTRICS, THEN HOLD THE STRETCH AFTER THE LAST REP FOR AS LONG AS POSSIBLE",
+            sets: [{reps: 8, RPE: "n/a", weight: 35}, {reps: 8, RPE: "n/a", weight: 35}, {
+                reps: 8,
+                RPE: "n/a",
+                weight: 35
+            },]
+        },
+            {
+                name: "MACHINE CHEST PRESS",
+                notes: "COMPLETE LAST SET, REST 15 SECONDS, THEN DO AS MANY SETS OF 3 AS POSSIBLE WITH 15 SECONDS OF REST BETWEEN",
+                sets: [{reps: 10, RPE: "n/a", weight: 60}, {reps: 10, RPE: "n/a", weight: 60}, {
+                    reps: 10,
+                    RPE: "n/a",
+                    weight: 60
+                },]
+            }, {
+            name: "HANGING LEG RAISE",
+            notes: "COMPLETE LAST SET, REST 15 SECONDS, THEN DO AS MANY SETS OF 3 AS POSSIBLE WITH 15 SECONDS OF REST BETWEEN",
+            sets: [{reps: 10, RPE: "n/a", weight: 0}, {reps: 10, RPE: "n/a", weight: 0}, {
+                reps: 10,
+                RPE: "n/a",
+                weight: 0
+            },]
+        }],
+        [{
+            name: "LAT PULLDOWN",
+            notes: "LAST SET REST 15 SECONDS, DO ANOTHER 2-3 REPS, REST ANOTHER 15 SECONDS, DO ANOTHER 1-2 REPS",
+            sets: [{reps: 6, RPE: "n/a", weight: 70}, {reps: 6, RPE: "n/a", weight: 70}, {
+                reps: 6,
+                RPE: "n/a",
+                weight: 70
+            },]
+        }, {
+            name: "SEATED ROW",
+            notes: "ON THE LAST SET DO SLOW ECCENTRICS, THEN HOLD THE STRETCH AFTER THE LAST REP FOR AS LONG AS POSSIBLE",
+            sets: [{reps: 8, RPE: "n/a", weight: 50}, {reps: 8, RPE: "n/a", weight: 50}, {
+                reps: 8,
+                RPE: "n/a",
                 weight: 50
             },]
         }, {
             name: "LYING LEG CURL",
-            notes: "FOCUS ON SQUEEZING HAMSTRINGS",
-            sets: [{reps: 6, RPE: "8", weight: 45}, {reps: 6, RPE: "8", weight: 45}, {reps: 6, RPE: "8", weight: 45},]
-        }, {
-            name: "DUMBBELL SHRUG",
-            notes: "FEEL A STRETCH ON THE TRAPS AT THE BOTTOM, SQUEEZE HARD AT THE TOP",
-            sets: [{reps: 20, RPE: "9", weight: 15}, {reps: 20, RPE: "9", weight: 15}, {
-                reps: 20,
-                RPE: "9",
-                weight: 15
+            notes: "COMPLETE LAST SET, REST 15 SECONDS, THEN DO AS MANY SETS OF 3 AS POSSIBLE WITH 15 SECONDS OF REST BETWEEN",
+            sets: [{reps: 10, RPE: "n/a", weight: 50}, {reps: 10, RPE: "n/a", weight: 50}, {
+                reps: 10,
+                RPE: "n/a",
+                weight: 50
             },]
-        },],
+        }, {
+            name: "CONCENTRATION CURL",
+            notes: "ON THE LAST SET DO SLOW ECCENTRICS, THEN HOLD THE STRETCH AFTER THE LAST REP FOR AS LONG AS POSSIBLE",
+            sets: [{reps: 6, RPE: "n/a", weight: 17.5}, {reps: 6, RPE: "n/a", weight: 17.5}, {
+                reps: 6,
+                RPE: "n/a",
+                weight: 17.5
+            },]
+        }, {
+            name: "CALF RAISE",
+            notes: "COMPLETE LAST SET, REST 15 SECONDS, THEN DO AS MANY SETS OF 3 AS POSSIBLE WITH 15 SECONDS OF REST BETWEEN",
+            sets: [{reps: 10, RPE: "n/a", weight: 50}, {reps: 10, RPE: "n/a", weight: 50}, {
+                reps: 10,
+                RPE: "n/a",
+                weight: 50
+            },]
+        }],
         [{
-            name: "EZ BAR CURL",
-            notes: "CURL THE BAR OUT AND UP IN AN ARC. MINIMIZE MOMENTUM.",
-            sets: [{reps: 12, RPE: "8", weight: 35}, {reps: 12, RPE: "8", weight: 35}, {
-                reps: 12,
-                RPE: "8",
-                weight: 35
+            name: "BENCH PRESS",
+            notes: "LAST SET REST 15 SECONDS, DO ANOTHER 2-3 REPS, REST ANOTHER 15 SECONDS, DO ANOTHER 1-2 REPS",
+            sets: [{reps: 6, RPE: "n/a", weight: 70},]
+        }, {
+            name: "LEAN AWAY LAT RAISE",
+            notes: "ON THE LAST SET DO SLOW ECCENTRICS, THEN HOLD THE STRETCH AFTER THE LAST REP FOR AS LONG AS POSSIBLE",
+            sets: [{reps: 8, RPE: "n/a", weight: 20},]
+        }, {
+            name: "SINGLE LEG EXTENSION",
+            notes: "COMPLETE LAST SET, REST 15 SECONDS, THEN DO AS MANY SETS OF 3 AS POSSIBLE WITH 15 SECONDS OF REST BETWEEN\"",
+            sets: [{reps: 8, RPE: "n/a", weight: 35},]
+        }, {
+            name: "ROPE TRICEP PUSHDOWN",
+            notes: "COMPLETE LAST SET, REST 15 SECONDS, THEN DO AS MANY SETS OF 3 AS POSSIBLE WITH 15 SECONDS OF REST BETWEEN",
+            sets: [{reps: 10, RPE: "n/a", weight: 25},]
+        }, {
+            name: "FARMERS WALK",
+            notes: "COMPLETE LAST SET, REST 15 SECONDS, THEN DO AS MANY SETS OF 3 AS POSSIBLE WITH 15 SECONDS OF REST BETWEEN",
+            sets: [{reps: 10, RPE: "n/a", weight: 45},]
+        }],
+        [{
+            name: "PENDLAY ROW",
+            notes: "LAST SET REST 15 SECONDS, DO ANOTHER 2-3 REPS, REST ANOTHER 15 SECONDS, DO ANOTHER 1-2 REPS",
+            sets: [{reps: 6, RPE: "n/a", weight: 55}, {reps: 6, RPE: "n/a", weight: 55}, {
+                reps: 6,
+                RPE: "n/a",
+                weight: 55
             },]
         }, {
-            name: "SKULL CRUSHER",
-            notes: "ARC THE BAR BACK BEHIND YOUR HEAD, SOFT TOUCH ON THE FLOOR BEHIND YOU",
-            sets: [{reps: 12, RPE: "8", weight: 35}, {reps: 12, RPE: "8", weight: 35}, {
-                reps: 12,
-                RPE: "8",
-                weight: 35
+            name: "GOOD MORNING",
+            notes: "ON THE LAST SET DO SLOW ECCENTRICS, THEN HOLD THE STRETCH AFTER THE LAST REP FOR AS LONG AS POSSIBLE",
+            sets: [{reps: 8, RPE: "n/a", weight: 60}, {reps: 8, RPE: "n/a", weight: 60}, {
+                reps: 8,
+                RPE: "n/a",
+                weight: 60
             },]
         }, {
-            name: "CABLE CURL (REVERSE 21s)",
-            notes: "DO BOTH ARMS AT ONCE: 7 REPS FULL ROM, 7 REPS TOP 1/2, 7 REPS BOTTOM 1/2",
-            sets: [{reps: 21, RPE: "10", weight: 40}, {reps: 21, RPE: "7", weight: 40}, {
-                reps: 21,
-                RPE: "7",
-                weight: 40
+            name: "STRAIGHT ARM PULLDOWN",
+            notes: "ON THE LAST SET DO SLOW ECCENTRICS, THEN HOLD THE STRETCH AFTER THE LAST REP FOR AS LONG AS POSSIBLE",
+            sets: [{reps: 8, RPE: "n/a", weight: 25}, {reps: 8, RPE: "n/a", weight: 25}, {
+                reps: 8,
+                RPE: "n/a",
+                weight: 25
             },]
         }, {
-            name: "TRICEPS PRESSDOWN (REVERSE 21s)",
-            notes: "DO BOTH ARMS AT ONCE: 7 REPS FULL ROM, 7 REPS BOTTOM 1/2, 7 REPS TOP 1/2",
-            sets: [{reps: 21, RPE: "10", weight: 45}, {reps: 21, RPE: "10", weight: 45}, {
-                reps: 21,
-                RPE: "10",
-                weight: 45
+            name: "CABLE CURL",
+            notes: "COMPLETE LAST SET, REST 15 SECONDS, THEN DO AS MANY SETS OF 3 AS POSSIBLE WITH 15 SECONDS OF REST BETWEEN",
+            sets: [{reps: 10, RPE: "n/a", weight: 30}, {reps: 10, RPE: "n/a", weight: 30}, {
+                reps: 10,
+                RPE: "n/a",
+                weight: 30
             },]
         }, {
-            name: "DUMBBELL LATERAL RAISE",
-            notes: "ARC THE DUMBBELL OUT, MIND-MUSCLE CONNECTION WITH MIDDLE FIBERS",
-            sets: [{reps: 20, RPE: "9", weight: 10}, {reps: 20, RPE: "9", weight: 10}, {
-                reps: 20,
-                RPE: "9",
-                weight: 10
+            name: "HANGING LEG RAISE",
+            notes: "COMPLETE LAST SET, REST 15 SECONDS, THEN DO AS MANY SETS OF 3 AS POSSIBLE WITH 15 SECONDS OF REST BETWEEN",
+            sets: [{reps: 10, RPE: "n/a", weight: 0}, {reps: 10, RPE: "n/a", weight: 0}, {
+                reps: 10,
+                RPE: "n/a",
+                weight: 0
             },]
-        }, {
-            name: "DUMBBELL SHRUG",
-            notes: "1-2 SECOND PAUSE AT THE BOTTOM OF EACH REP, FULL SQUEEZE AT THE TOP",
-            sets: [{reps: 12, RPE: "9", weight: 20}, {reps: 12, RPE: "9", weight: 20}, {
-                reps: 12,
-                RPE: "9",
-                weight: 20
-            },]
-        },]],
-        [[{
-            name: "BARBELL BENCH PRESS",
-            notes: "TOP SET. LEAVE ~2 REPS IN THE TANK. HARD SET.",
-            sets: [{reps: 2, RPE: "90%", weight: 70}]
-        },{
-            name: "BARBELL BENCH PRESS",
-            notes: "SET UP A COMFORTABLE ARCH, SLIGHT PAUSE ON THE CHEST, EXPLODE UP",
-            sets: [{reps: 6, RPE: "77.5%", weight: 60},{reps: 6, RPE: "77.5%", weight: 60},{reps: 6, RPE: "77.5%", weight: 60},]
-        },{
-            name: "CHIN-UP",
-            notes: "UNDERHAND GRIP, PULL YOUR CHEST TO THE BAR, ADD WEIGHT IF NEEDED TO HIT RPE",
-            sets: [{reps: 10, RPE: "8", weight: 0},]
-        },{
-            name: "STANDING ARNOLD DUMBBELL PRESS",
-            notes: "ROTATE THE DBS IN AT THE BOTTOM AND OUT AT THE TOP",
-            sets: [{reps: 10, RPE: "9", weight: 17.5},]
-        },{
-            name: "CHEST-SUPPORTED DUMBBELL ROW",
-            notes: "LIE ON AN INCLINE BENCH AND DO ROWS - PULL WITH LATS!",
-            sets: [{reps: 12, RPE: "9", weight: 20},]
-        },{
-            name: "FACE PULL",
-            notes: "CAN USE CABLE/ROPE OR BAND, RETRACT YOUR SHOULDER BLADES AS YOU PULL",
-            sets: [{reps: 15, RPE: "9", weight: 35},]
-        },{
-            name: "DUMBBELL LATERAL RAISE",
-            notes: "ARC THE DUMBBELL OUT, MIND-MUSCLE CONNECTION WITH MIDDLE FIBERS",
-            sets: [{reps: 15, RPE: "10", weight: 10},]
-        },{
-            name: "CONCENTRATION BICEP CURL",
-            notes: "PIN YOUR ELBOW AGAINST YOUR UPPER LEG OR THE BACK OF A BENCH",
-            sets: [{reps: 12, RPE: "9", weight: 15},]
-        },]]
-    ]
-    const exerciseList = program[week][day].map((exercise, index) => <Exercise dayProgram={program[week][day]}
-                                                                               key={index} pageNumber={index + 1}/>)
-    return (
-        <div>
-            <DayWeekSelectionPage setWeek={setWeek} setDay={setDay} currDay={day} currWeek={week} program={program}/>
-            <div>
-                {exerciseList}
-            </div>
-        </div>
-    );
-}
-
-function DayWeekSelectionPage(props) {
-    const dayButtons = []
-    for (let i = 1; i < props.program[props.currWeek].length+1; i++) {
-        dayButtons.push(<button className={props.currDay === i-1 ? "dayWeekButtonSelected" : "dayWeekButton"} key={i} onClick={() => props.setDay(i-1)}>{i}</button>)
-    }
-
-    const weekButtons = []
-    for (let i = 1; i < props.program.length+1; i++) {
-        weekButtons.push(<button className={props.currWeek === i-1 ? "dayWeekButtonSelected" : "dayWeekButton"} key={i} onClick={() => props.setWeek(i-1)}>{i}</button>)
-    }
-
-    return (
-        <div className="DayWeekSelectionPage">
-            <div className="dayWeekContainer">
-            <h2 className="promptHeader">Select a day and a week</h2>
-            <h3>Week</h3>
-            {weekButtons}
-
-            <h3>Day</h3>
-                {dayButtons}
-            </div>
-        </div>
-    );
-}
-
-function Exercise(props) {
+        }]
+    ]);
+    const [day, setDay] = useState(0)
 
     const [time, setTime] = useState(0)
     const [timerInterval, setTimerInterval] = useState()
@@ -283,6 +257,104 @@ function Exercise(props) {
         setTime(0)
     }
 
+    useEffect(() => {
+        let loadedProgram = JSON.parse(localStorage.getItem("program"))
+        if (loadedProgram) {
+            setProgram(loadedProgram)
+        }
+    }, [])
+
+
+    function setWeight(exerciseNum, setNum, newWeight) {
+        let modifiedExercises = [...program];
+        modifiedExercises[day][exerciseNum].sets[setNum].weight = newWeight;
+        setProgram(modifiedExercises)
+
+        localStorage.setItem("program", JSON.stringify(program))
+    }
+
+    function setReps(exerciseNum, setNum, newReps) {
+        let modifiedExercises = [...program];
+        modifiedExercises[day][exerciseNum].sets[setNum].reps = newReps;
+        setProgram(modifiedExercises)
+
+        localStorage.setItem("program", JSON.stringify(program))
+    }
+
+    if (program) {
+        const exerciseList = program[day].map((exercise, index) => <Exercise dayProgram={program[day]}
+                                                                                   key={(day*index) + index} pageNumber={index + 1}
+                                                                                   setWeight={setWeight}
+                                                                                   setReps={setReps} time={time} startTimer={startTimer} stopTimer={stopTimer}/>)
+        return (
+            <div>
+                <DayWeekSelectionPage setDay={setDay}
+                                      currDay={day} program={program} stopTimer={stopTimer}/>
+                <div>
+                    {exerciseList}
+                </div>
+            </div>
+        );
+    } else {
+        return (
+            <p>Loading Data</p>
+        );
+    }
+}
+
+function DayWeekSelectionPage(props) {
+    const dayButtons = []
+    for (let i = 1; i < props.program.length + 1; i++) {
+        dayButtons.push(<button className={props.currDay === i - 1 ? "dayWeekButtonSelected" : "dayWeekButton"} key={i}
+                                onClick={() => handleChangeDay(i-1)}>{i}</button>)
+    }
+
+    function handleChangeDay(i) {
+        props.stopTimer()
+        let checkboxes = document.getElementsByTagName('input');
+        for (let i=0; i<checkboxes.length; i++)  {
+            if (checkboxes[i].type === 'checkbox')   {
+                console.log(checkboxes[i].checked)
+                checkboxes[i].checked = false;
+                //console.log(checkboxes[i].checked)
+            }
+        }
+        props.setDay(i)
+    }
+
+    function handleReset() {
+        localStorage.setItem("program", null)
+    }
+
+    return (
+        <div className="DayWeekSelectionPage">
+            <div className="dayWeekContainer">
+                <h2 className="promptHeader">Program</h2>
+                <h2 className="promptHeader">Select a day</h2>
+
+                <h3>Day</h3>
+                {dayButtons}
+
+                <button className="dayWeekButton"
+                        onClick={() => handleReset()}>Reset
+                </button>
+
+            </div>
+        </div>
+    );
+}
+
+function Exercise(props) {
+    console.log(props)
+
+    function setWeight(setNumber, adjustment) {
+        props.setWeight(props.pageNumber - 1, setNumber, adjustment)
+    }
+
+    function setReps(setNumber, adjustment) {
+        props.setReps(props.pageNumber - 1, setNumber, adjustment)
+    }
+
     let previousName = props.pageNumber !== 1 ? "⬆ " + props.dayProgram[props.pageNumber - 2].name : ""
     let exerciseName = props.dayProgram[props.pageNumber - 1].name
     let exerciseNotes = props.dayProgram[props.pageNumber - 1].notes
@@ -293,15 +365,17 @@ function Exercise(props) {
         <section className="exercisePage">
             <div className="topBar">
                 <p className="previousExerciseName">{previousName}</p>
-                <p className="timer">RESTING TIME: {new Date(time * 1000).toISOString().substr(15, 4)}m</p>
-                <p className="nextSetReminder">{time > 180 ? "START NEXT SET!" : ""}</p>
+                <p className="timer">RESTING TIME: {new Date(props.time * 1000).toISOString().substr(15, 4)}m</p>
+                <p className="nextSetReminder">{props.time > 180 ? "START NEXT SET!" : ""}</p>
             </div>
 
             <div className="mainContent">
                 <p className="exerciseName">{exerciseName}</p>
                 <div className="sets">
-                    {sets.map((set, index) => <Set id={index} key={index} reps={set.reps} RPE={set.RPE} weight={set.weight}
-                                                   startTimer={startTimer} stopTimer={stopTimer}/>)}
+                    {sets.map((set, index) => <Set id={index} key={(props.pageNumber*index) + index} reps={set.reps} RPE={set.RPE}
+                                                   weight={set.weight}
+                                                   startTimer={props.startTimer} stopTimer={props.stopTimer} setWeight={setWeight}
+                                                   setReps={setReps}/>)}
                 </div>
                 <div className="notes">
                     <header className="notesHeader">NOTES</header>
@@ -317,8 +391,19 @@ function Exercise(props) {
 }
 
 function Set(props) {
+
+    const [weight, setWeight] = useState(props.weight)
+    const [reps, setReps] = useState(props.reps)
+
+    useEffect(() => {
+        setWeight(props.weight)
+        setReps(props.reps)
+    }, [props.weight, props.reps])
+
     function handleCheck(checkbox) {
         if (checkbox.target.checked) {
+            props.setWeight(props.id, weight)
+            props.setReps(props.id, reps)
             props.startTimer()
         } else {
             props.stopTimer()
@@ -326,10 +411,27 @@ function Set(props) {
     }
 
     return (<div className="set">
-        <Checkbox className="checkbox" type="checkbox" id={"set" + props.id} onClick={handleCheck} size="medium"/>
-        <p className="setDescriptor">Reps: {props.reps}</p>
-        <p className="setDescriptor">RPE: {props.RPE}</p>
-        <p className="setDescriptor">Weight: {props.weight}</p>
+        <input className="checkbox" type="checkbox" id={"set" + props.id} onClick={handleCheck} size="medium"/>
+        <div>
+            <p className="setDescriptor">Reps: {reps}</p>
+            <p className="lastWeekDescriptor">Last Wk: {props.reps}</p>
+        </div>
+        <div className="adjustmentButtonContainer">
+            <button className="adjustmentButton" onClick={() => setReps(reps + 1)}>&uarr;</button>
+            <br/>
+            <button className="adjustmentButton" onClick={() => setReps(reps - 1)}>&darr;</button>
+        </div>
+
+        <div>
+            <p className="setDescriptor">Weight: {weight}kg</p>
+            <p className="lastWeekDescriptor">Last Wk: {props.weight}kg</p>
+        </div>
+        <div className="adjustmentButtonContainer">
+            <button className="adjustmentButton" onClick={() => setWeight(weight + 1)}>&uarr;</button>
+            <br/>
+            <button className="adjustmentButton" onClick={() => setWeight(weight - 1)}>&darr;</button>
+        </div>
+
     </div>)
 }
 

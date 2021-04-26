@@ -8,6 +8,7 @@
 .DayWeekSelectionPage{
     scroll-snap-align: start;
     height:100vh;
+    max-height: 100vh;
     min-height: 100vh;
 }
 
@@ -18,12 +19,14 @@
 .dayWeekButton {
     font-size: 7vw;
     margin-left: 6vw;
+    margin-top: 2vh;
 }
 
 .dayWeekButtonSelected {
     background-color: grey;
     font-size: 7vw;
     margin-left: 6vw;
+    margin-top: 2vh;
 }
 
 .promptHeader{
@@ -32,16 +35,19 @@
 }
 
 .topBar {
-    margin-top: 2vh;
+    flex: 1;
+    /*margin-top: 2vh;*/
 }
 
 .bottomBar {
-    margin-bottom: 2vh;
+    flex: 1;
+    /*margin-bottom: 2vh;*/
 }
 
 .exercisePage {
     scroll-snap-align: start;
-    height: 100vh;
+    max-height: 100vh;
+    min-height: 100vh;
     margin-right: 8vw;
     margin-left: 8vw;
     display: flex;
@@ -62,7 +68,7 @@
 }
 
 .mainContent {
-    margin-bottom: 20vh;
+    flex: 1;
 }
 
 .set {
@@ -70,13 +76,34 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
+    margin-top: 3vh;
+}
+
+.adjustmentButtonContainer {
+    margin-right: 5vw;
+    margin-left: -5vw;
+}
+
+.adjustmentButton {
+    margin-top: 1vh;
+    min-width: 8vw;
+    min-height: 4vh;
 }
 
 .setDescriptor {
+    margin-top: 2vh;
     margin-right: 4vw;
 }
 
+.lastWeekDescriptor {
+    font-size: 2.75vw;
+    margin-top: -2vh;
+}
+
 .checkbox {
+    width: 6vw;
+    height: 6vh;
     margin-right: 6vw;
 }
 
@@ -85,6 +112,7 @@
 }
 
 .previousExerciseName {
+    min-height: 2vh;
     font-size: 3vw;
     text-align: center;
 }
@@ -95,6 +123,7 @@
 }
 
 .nextExerciseName {
+    min-height: 2vh;
     font-size: 3vw;
     text-align: center;
 }
