@@ -26,7 +26,8 @@
             "notes": "COMPLETE LAST SET, REST 15 SECONDS, DO ANOTHER 2-3 reps, REST ANOTHER 15 SECONDS, DO ANOTHER 1-2 reps",
             "sets": [
                 {
-                    "reps": 12 "RPE": "n/a",
+                    "reps": 12,
+                    "RPE": "n/a",
                     "weight": 16
                 },
                 {
