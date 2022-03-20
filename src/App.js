@@ -145,7 +145,7 @@ function Exercise(props) {
         <section className="exercisePage">
             <div className="topBar">
                 <p className="previousExerciseName">{previousName}</p>
-                <p className="timer">RESTING TIME: {new Date(props.time * 1000).toISOString().substr(15, 4)}m</p>
+                <p className="timer">RESTING TIME: {new Date(props.time * 1000).toISOString().slice(15, 19)}m</p>
                 <p className="nextSetReminder">{props.time > 180 ? "START NEXT SET!" : ""}</p>
             </div>
 
@@ -207,9 +207,9 @@ function Set(props) {
             <p className="lastWeekDescriptor">Last Wk: {props.weight}kg</p>
         </div>
         <div className="adjustmentButtonContainer">
-            <button className="adjustmentButton" onClick={() => setWeight(weight + 1)}>&uarr;</button>
+            <button className="adjustmentButton" onClick={() => setWeight(weight + 0.5)}>&uarr;</button>
             <br/>
-            <button className="adjustmentButton" onClick={() => setWeight(weight - 1)}>&darr;</button>
+            <button className="adjustmentButton" onClick={() => setWeight(weight - 0.5)}>&darr;</button>
         </div>
 
     </div>)

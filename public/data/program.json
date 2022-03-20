@@ -1,229 +1,580 @@
 [
-    [{
-        "name": "BEHIND THE LEG DEADLIFT",
-        "notes": "LAST SET REST 15 SECONDS, DO ANOTHER 2-3 reps, REST ANOTHER 15 SECONDS, DO ANOTHER 1-2 reps",
-        "sets": [{"reps": 6, "RPE": "n/a", "weight": 80}, {"reps": 6, "RPE": "n/a", "weight": 80}, {
-            "reps": 6,
-            "RPE": "n/a",
-            "weight": 80
-        }]
-    }, {
-        "name": "CLOSE-GRIP BENCH PRESS",
-        "notes": "COMPLETE LAST SET, REST 15 SECONDS, DO ANOTHER 2-3 reps, REST ANOTHER 15 SECONDS, DO ANOTHER 1-2 reps",
-        "sets": [{"reps": 6, "RPE": "n/a", "weight": 70}, {"reps": 6, "RPE": "n/a", "weight": 70}, {
-            "reps": 6,
-            "RPE": "n/a",
-            "weight": 70
-        }]
-    }, {
-        "name": "DB INCLINE PRESS",
-        "notes": "ON THE LAST SET DO SLOW ECCENTRICS, THEN HOLD THE STRETCH AFTER THE LAST REP FOR AS LONG AS POSSIBLE",
-        "sets": [{"reps": 8, "RPE": "n/a", "weight": 25}, {"reps": 8, "RPE": "n/a", "weight": 25}, {
-            "reps": 8,
-            "RPE": "n/a",
-            "weight": 25
-        }]
-    }, {
-        "name": "DB LAT RAISE",
-        "notes": "COMPLETE LAST SET, REST 15 SECONDS, THEN DO AS MANY sets OF 3 AS POSSIBLE WITH 15 SECONDS OF REST BETWEEN",
-        "sets": [{"reps": 12, "RPE": "n/a", "weight": 10}, {"reps": 12, "RPE": "n/a", "weight": 10}, {
-            "reps": 12,
-            "RPE": "n/a",
-            "weight": 10
-        }]
-    }, {
-        "name": "CALF RAISE",
-        "notes": "COMPLETE LAST SET, REST 15 SECONDS, THEN DO AS MANY sets OF 3 AS POSSIBLE WITH 15 SECONDS OF REST BETWEEN",
-        "sets": [{"reps": 10, "RPE": "n/a", "weight": 50}, {"reps": 10, "RPE": "n/a", "weight": 50}, {
-            "reps": 10,
-            "RPE": "n/a",
-            "weight": 50
-        }]
-    }],
-    [{
-        "name": "DEADLIFT",
-        "notes": "LAST SET REST 15 SECONDS, DO ANOTHER 2-3 reps, REST ANOTHER 15 SECONDS, DO ANOTHER 1-2 reps",
-        "sets": [{"reps": 6, "RPE": "n/a", "weight": 115}, {"reps": 6, "RPE": "n/a", "weight": 115}, {
-            "reps": 6,
-            "RPE": "n/a",
-            "weight": 115
-        }]
-    }, {
-        "name": "DB PULLOVER",
-        "notes": "ON THE LAST SET DO SLOW ECCENTRICS, THEN HOLD THE STRETCH AFTER THE LAST REP FOR AS LONG AS POSSIBLE",
-        "sets": [{"reps": 8, "RPE": "n/a", "weight": 27.5}, {"reps": 8, "RPE": "n/a", "weight": 27.5}, {
-            "reps": 8,
-            "RPE": "n/a",
-            "weight": 27.5
-        }]
-    }, {
-        "name": "DB REAR DELT RAISE",
-        "notes": "COMPLETE LAST SET, REST 15 SECONDS, THEN DO AS MANY sets OF 3 AS POSSIBLE WITH 15 SECONDS OF REST BETWEEN",
-        "sets": [{"reps": 10, "RPE": "n/a", "weight": 15}, {"reps": 10, "RPE": "n/a", "weight": 15}, {
-            "reps": 10,
-            "RPE": "n/a",
-            "weight": 15
-        }]
-    }, {
-        "name": "EZ BAR CURL",
-        "notes": "LAST SET REST 15 SECONDS, DO ANOTHER 2-3 reps, REST ANOTHER 15 SECONDS, DO ANOTHER 1-2 reps",
-        "sets": [{"reps": 6, "RPE": "n/a", "weight": 40}, {"reps": 6, "RPE": "n/a", "weight": 40}, {
-            "reps": 6,
-            "RPE": "n/a",
-            "weight": 40
-        }]
-    }, {
-        "name": "FARMERS WALK",
-        "notes": "COMPLETE LAST SET, REST 15 SECONDS, THEN DO AS MANY sets OF 3 AS POSSIBLE WITH 15 SECONDS OF REST BETWEEN",
-        "sets": [{"reps": 10, "RPE": "n/a", "weight": 45}, {"reps": 10, "RPE": "n/a", "weight": 45}, {
-            "reps": 10,
-            "RPE": "n/a",
-            "weight": 45
-        }]
-    }],
-    [{
-        "name": "MILITARY PRESS",
-        "notes": "LAST SET REST 15 SECONDS, DO ANOTHER 2-3 reps, REST ANOTHER 15 SECONDS, DO ANOTHER 1-2 reps",
-        "sets": [{"reps": 6, "RPE": "n/a", "weight": 50}, {"reps": 6, "RPE": "n/a", "weight": 50}, {
-            "reps": 6,
-            "RPE": "n/a",
-            "weight": 50
-        }]
-    }, {
-        "name": "BEHIND THE LEG DEADLIFT",
-        "notes": "ON THE LAST SET DO SLOW ECCENTRICS, THEN HOLD THE STRETCH AFTER THE LAST REP FOR AS LONG AS POSSIBLE",
-        "sets": [{"reps": 8, "RPE": "n/a", "weight": 70}, {"reps": 8, "RPE": "n/a", "weight": 70}, {
-            "reps": 8,
-            "RPE": "n/a",
-            "weight": 70
-        }]
-    }, {
-        "name": "EZ BAR SKULLCRUSHER",
-        "notes": "ON THE LAST SET DO SLOW ECCENTRICS, THEN HOLD THE STRETCH AFTER THE LAST REP FOR AS LONG AS POSSIBLE",
-        "sets": [{"reps": 8, "RPE": "n/a", "weight": 35}, {"reps": 8, "RPE": "n/a", "weight": 35}, {
-            "reps": 8,
-            "RPE": "n/a",
-            "weight": 35
-        }]
-    },
+    [
         {
-            "name": "MACHINE CHEST PRESS",
+            "name": "BACK SQUAT",
+            "notes": "LAST SET REST 15 SECONDS, DO ANOTHER 2-3 reps, REST ANOTHER 15 SECONDS, DO ANOTHER 1-2 reps",
+            "sets": [
+                {
+                    "reps": 5,
+                    "RPE": "n/a",
+                    "weight": 110
+                },
+                {
+                    "reps": 5,
+                    "RPE": "n/a",
+                    "weight": 110
+                },
+                {
+                    "reps": 5,
+                    "RPE": "n/a",
+                    "weight": 110
+                }
+            ]
+        },
+        {
+            "name": "TRICEP KICKBACKS",
+            "notes": "COMPLETE LAST SET, REST 15 SECONDS, DO ANOTHER 2-3 reps, REST ANOTHER 15 SECONDS, DO ANOTHER 1-2 reps",
+            "sets": [
+                {
+                    "reps": 12 "RPE": "n/a",
+                    "weight": 16
+                },
+                {
+                    "reps": 12,
+                    "RPE": "n/a",
+                    "weight": 16
+                },
+                {
+                    "reps": 18,
+                    "RPE": "n/a",
+                    "weight": 16
+                }
+            ]
+        },
+        {
+            "name": "DB INCLINE PRESS",
+            "notes": "ON THE LAST SET DO SLOW ECCENTRICS, THEN HOLD THE STRETCH AFTER THE LAST REP FOR AS LONG AS POSSIBLE",
+            "sets": [
+                {
+                    "reps": 8,
+                    "RPE": "n/a",
+                    "weight": 30
+                },
+                {
+                    "reps": 8,
+                    "RPE": "n/a",
+                    "weight": 30
+                },
+                {
+                    "reps": 8,
+                    "RPE": "n/a",
+                    "weight": 30
+                }
+            ]
+        },
+        {
+            "name": "DB LAT RAISE",
             "notes": "COMPLETE LAST SET, REST 15 SECONDS, THEN DO AS MANY sets OF 3 AS POSSIBLE WITH 15 SECONDS OF REST BETWEEN",
-            "sets": [{"reps": 10, "RPE": "n/a", "weight": 60}, {"reps": 10, "RPE": "n/a", "weight": 60}, {
-                "reps": 10,
-                "RPE": "n/a",
-                "weight": 60
-            }]
-        }, {
-        "name": "HANGING LEG RAISE",
-        "notes": "COMPLETE LAST SET, REST 15 SECONDS, THEN DO AS MANY sets OF 3 AS POSSIBLE WITH 15 SECONDS OF REST BETWEEN",
-        "sets": [{"reps": 10, "RPE": "n/a", "weight": 0}, {"reps": 10, "RPE": "n/a", "weight": 0}, {
-            "reps": 10,
-            "RPE": "n/a",
-            "weight": 0
-        }]
-    }],
-    [{
-        "name": "LAT PULLDOWN",
-        "notes": "LAST SET REST 15 SECONDS, DO ANOTHER 2-3 reps, REST ANOTHER 15 SECONDS, DO ANOTHER 1-2 reps",
-        "sets": [{"reps": 6, "RPE": "n/a", "weight": 70}, {"reps": 6, "RPE": "n/a", "weight": 70}, {
-            "reps": 6,
-            "RPE": "n/a",
-            "weight": 70
-        }]
-    }, {
-        "name": "SEATED ROW",
-        "notes": "ON THE LAST SET DO SLOW ECCENTRICS, THEN HOLD THE STRETCH AFTER THE LAST REP FOR AS LONG AS POSSIBLE",
-        "sets": [{"reps": 8, "RPE": "n/a", "weight": 50}, {"reps": 8, "RPE": "n/a", "weight": 50}, {
-            "reps": 8,
-            "RPE": "n/a",
-            "weight": 50
-        }]
-    }, {
-        "name": "LYING LEG CURL",
-        "notes": "COMPLETE LAST SET, REST 15 SECONDS, THEN DO AS MANY sets OF 3 AS POSSIBLE WITH 15 SECONDS OF REST BETWEEN",
-        "sets": [{"reps": 10, "RPE": "n/a", "weight": 50}, {"reps": 10, "RPE": "n/a", "weight": 50}, {
-            "reps": 10,
-            "RPE": "n/a",
-            "weight": 50
-        }]
-    }, {
-        "name": "CONCENTRATION CURL",
-        "notes": "ON THE LAST SET DO SLOW ECCENTRICS, THEN HOLD THE STRETCH AFTER THE LAST REP FOR AS LONG AS POSSIBLE",
-        "sets": [{"reps": 6, "RPE": "n/a", "weight": 17.5}, {"reps": 6, "RPE": "n/a", "weight": 17.5}, {
-            "reps": 6,
-            "RPE": "n/a",
-            "weight": 17.5
-        }]
-    }, {
-        "name": "CALF RAISE",
-        "notes": "COMPLETE LAST SET, REST 15 SECONDS, THEN DO AS MANY sets OF 3 AS POSSIBLE WITH 15 SECONDS OF REST BETWEEN",
-        "sets": [{"reps": 10, "RPE": "n/a", "weight": 50}, {"reps": 10, "RPE": "n/a", "weight": 50}, {
-            "reps": 10,
-            "RPE": "n/a",
-            "weight": 50
-        }]
-    }],
-    [{
-        "name": "BENCH PRESS",
-        "notes": "LAST SET REST 15 SECONDS, DO ANOTHER 2-3 reps, REST ANOTHER 15 SECONDS, DO ANOTHER 1-2 reps",
-        "sets": [{"reps": 6, "RPE": "n/a", "weight": 70}]
-    }, {
-        "name": "LEAN AWAY LAT RAISE",
-        "notes": "ON THE LAST SET DO SLOW ECCENTRICS, THEN HOLD THE STRETCH AFTER THE LAST REP FOR AS LONG AS POSSIBLE",
-        "sets": [{"reps": 8, "RPE": "n/a", "weight": 20}]
-    }, {
-        "name": "SINGLE LEG EXTENSION",
-        "notes": "COMPLETE LAST SET, REST 15 SECONDS, THEN DO AS MANY sets OF 3 AS POSSIBLE WITH 15 SECONDS OF REST BETWEEN\"",
-        "sets": [{"reps": 8, "RPE": "n/a", "weight": 35}]
-    }, {
-        "name": "ROPE TRICEP PUSHDOWN",
-        "notes": "COMPLETE LAST SET, REST 15 SECONDS, THEN DO AS MANY sets OF 3 AS POSSIBLE WITH 15 SECONDS OF REST BETWEEN",
-        "sets": [{"reps": 10, "RPE": "n/a", "weight": 25}]
-    }, {
-        "name": "FARMERS WALK",
-        "notes": "COMPLETE LAST SET, REST 15 SECONDS, THEN DO AS MANY sets OF 3 AS POSSIBLE WITH 15 SECONDS OF REST BETWEEN",
-        "sets": [{"reps": 10, "RPE": "n/a", "weight": 45}]
-    }],
-    [{
-        "name": "PENDLAY ROW",
-        "notes": "LAST SET REST 15 SECONDS, DO ANOTHER 2-3 reps, REST ANOTHER 15 SECONDS, DO ANOTHER 1-2 reps",
-        "sets": [{"reps": 6, "RPE": "n/a", "weight": 55}, {"reps": 6, "RPE": "n/a", "weight": 55}, {
-            "reps": 6,
-            "RPE": "n/a",
-            "weight": 55
-        }]
-    }, {
-        "name": "GOOD MORNING",
-        "notes": "ON THE LAST SET DO SLOW ECCENTRICS, THEN HOLD THE STRETCH AFTER THE LAST REP FOR AS LONG AS POSSIBLE",
-        "sets": [{"reps": 8, "RPE": "n/a", "weight": 60}, {"reps": 8, "RPE": "n/a", "weight": 60}, {
-            "reps": 8,
-            "RPE": "n/a",
-            "weight": 60
-        }]
-    }, {
-        "name": "STRAIGHT ARM PULLDOWN",
-        "notes": "ON THE LAST SET DO SLOW ECCENTRICS, THEN HOLD THE STRETCH AFTER THE LAST REP FOR AS LONG AS POSSIBLE",
-        "sets": [{"reps": 8, "RPE": "n/a", "weight": 25}, {"reps": 8, "RPE": "n/a", "weight": 25}, {
-            "reps": 8,
-            "RPE": "n/a",
-            "weight": 25
-        }]
-    }, {
-        "name": "CABLE CURL",
-        "notes": "COMPLETE LAST SET, REST 15 SECONDS, THEN DO AS MANY sets OF 3 AS POSSIBLE WITH 15 SECONDS OF REST BETWEEN",
-        "sets": [{"reps": 10, "RPE": "n/a", "weight": 30}, {"reps": 10, "RPE": "n/a", "weight": 30}, {
-            "reps": 10,
-            "RPE": "n/a",
-            "weight": 30
-        }]
-    }, {
-        "name": "HANGING LEG RAISE",
-        "notes": "COMPLETE LAST SET, REST 15 SECONDS, THEN DO AS MANY sets OF 3 AS POSSIBLE WITH 15 SECONDS OF REST BETWEEN",
-        "sets": [{"reps": 10, "RPE": "n/a", "weight": 0}, {"reps": 10, "RPE": "n/a", "weight": 0}, {
-            "reps": 10,
-            "RPE": "n/a",
-            "weight": 0
-        }]
-    }]
+            "sets": [
+                {
+                    "reps": 12,
+                    "RPE": "n/a",
+                    "weight": 12
+                },
+                {
+                    "reps": 12,
+                    "RPE": "n/a",
+                    "weight": 12
+                },
+                {
+                    "reps": 12,
+                    "RPE": "n/a",
+                    "weight": 12
+                }
+            ]
+        }
+    ],
+    [
+        {
+            "name": "DEADLIFT",
+            "notes": "LAST SET REST 15 SECONDS, DO ANOTHER 2-3 reps, REST ANOTHER 15 SECONDS, DO ANOTHER 1-2 reps",
+            "sets": [
+                {
+                    "reps": 5,
+                    "RPE": "n/a",
+                    "weight": 140
+                },
+                {
+                    "reps": 5,
+                    "RPE": "n/a",
+                    "weight": 140
+                },
+                {
+                    "reps": 5,
+                    "RPE": "n/a",
+                    "weight": 140
+                }
+            ]
+        },
+        {
+            "name": "DB PULLOVER",
+            "notes": "ON THE LAST SET DO SLOW ECCENTRICS, THEN HOLD THE STRETCH AFTER THE LAST REP FOR AS LONG AS POSSIBLE",
+            "sets": [
+                {
+                    "reps": 8,
+                    "RPE": "n/a",
+                    "weight": 36
+                },
+                {
+                    "reps": 8,
+                    "RPE": "n/a",
+                    "weight": 36
+                },
+                {
+                    "reps": 8,
+                    "RPE": "n/a",
+                    "weight": 36
+                }
+            ]
+        },
+        {
+            "name": "FACE PULLS",
+            "notes": "COMPLETE LAST SET, REST 15 SECONDS, THEN DO AS MANY sets OF 3 AS POSSIBLE WITH 15 SECONDS OF REST BETWEEN",
+            "sets": [
+                {
+                    "reps": 10,
+                    "RPE": "n/a",
+                    "weight": 57.5
+                },
+                {
+                    "reps": 10,
+                    "RPE": "n/a",
+                    "weight": 57.5
+                },
+                {
+                    "reps": 10,
+                    "RPE": "n/a",
+                    "weight": 57.5
+                }
+            ]
+        },
+        {
+            "name": "HAMMER CURL",
+            "notes": "LAST SET REST 15 SECONDS, DO ANOTHER 2-3 reps, REST ANOTHER 15 SECONDS, DO ANOTHER 1-2 reps",
+            "sets": [
+                {
+                    "reps": 10,
+                    "RPE": "n/a",
+                    "weight": 18
+                },
+                {
+                    "reps": 10,
+                    "RPE": "n/a",
+                    "weight": 18
+                },
+                {
+                    "reps": 10,
+                    "RPE": "n/a",
+                    "weight": 18
+                }
+            ]
+        },
+        {
+            "name": "AB ROLLER",
+            "notes": "COMPLETE LAST SET, REST 15 SECONDS, THEN DO AS MANY sets OF 3 AS POSSIBLE WITH 15 SECONDS OF REST BETWEEN",
+            "sets": [
+                {
+                    "reps": 12,
+                    "RPE": "n/a",
+                    "weight": 0
+                },
+                {
+                    "reps": 12,
+                    "RPE": "n/a",
+                    "weight": 0
+                },
+                {
+                    "reps": 12,
+                    "RPE": "n/a",
+                    "weight": 0
+                }
+            ]
+        }
+    ],
+    [
+        {
+            "name": "MILITARY PRESS",
+            "notes": "LAST SET REST 15 SECONDS, DO ANOTHER 2-3 reps, REST ANOTHER 15 SECONDS, DO ANOTHER 1-2 reps",
+            "sets": [
+                {
+                    "reps": 5,
+                    "RPE": "n/a",
+                    "weight": 57.5
+                },
+                {
+                    "reps": 5,
+                    "RPE": "n/a",
+                    "weight": 57.5
+                },
+                {
+                    "reps": 5,
+                    "RPE": "n/a",
+                    "weight": 57.5
+                }
+            ]
+        },
+        {
+            "name": "BACK SQUAT",
+            "notes": "ON THE LAST SET DO SLOW ECCENTRICS, THEN HOLD THE STRETCH AFTER THE LAST REP FOR AS LONG AS POSSIBLE",
+            "sets": [
+                {
+                    "reps": 12,
+                    "RPE": "n/a",
+                    "weight": 75
+                },
+                {
+                    "reps": 12,
+                    "RPE": "n/a",
+                    "weight": 75
+                },
+                {
+                    "reps": 12,
+                    "RPE": "n/a",
+                    "weight": 75
+                }
+            ]
+        },
+        {
+            "name": "EZ BAR SKULLCRUSHER",
+            "notes": "ON THE LAST SET DO SLOW ECCENTRICS, THEN HOLD THE STRETCH AFTER THE LAST REP FOR AS LONG AS POSSIBLE",
+            "sets": [
+                {
+                    "reps": 8,
+                    "RPE": "n/a",
+                    "weight": 35
+                },
+                {
+                    "reps": 8,
+                    "RPE": "n/a",
+                    "weight": 35
+                },
+                {
+                    "reps": 8,
+                    "RPE": "n/a",
+                    "weight": 35
+                }
+            ]
+        },
+        {
+            "name": "DUMBBELL PRESS",
+            "notes": "COMPLETE LAST SET, REST 15 SECONDS, THEN DO AS MANY sets OF 3 AS POSSIBLE WITH 15 SECONDS OF REST BETWEEN",
+            "sets": [
+                {
+                    "reps": 8,
+                    "RPE": "n/a",
+                    "weight": 30
+                },
+                {
+                    "reps": 8,
+                    "RPE": "n/a",
+                    "weight": 30
+                },
+                {
+                    "reps": 8,
+                    "RPE": "n/a",
+                    "weight": 30
+                }
+            ]
+        }
+    ],
+    [
+        {
+            "name": "WEIGHTED PULL UPS",
+            "notes": "LAST SET REST 15 SECONDS, DO ANOTHER 2-3 reps, REST ANOTHER 15 SECONDS, DO ANOTHER 1-2 reps",
+            "sets": [
+                {
+                    "reps": 5,
+                    "RPE": "n/a",
+                    "weight": 20
+                },
+                {
+                    "reps": 5,
+                    "RPE": "n/a",
+                    "weight": 20
+                },
+                {
+                    "reps": 5,
+                    "RPE": "n/a",
+                    "weight": 20
+                }
+            ]
+        },
+        {
+            "name": "SEATED ROW",
+            "notes": "ON THE LAST SET DO SLOW ECCENTRICS, THEN HOLD THE STRETCH AFTER THE LAST REP FOR AS LONG AS POSSIBLE",
+            "sets": [
+                {
+                    "reps": 8,
+                    "RPE": "n/a",
+                    "weight": 90
+                },
+                {
+                    "reps": 8,
+                    "RPE": "n/a",
+                    "weight": 90
+                },
+                {
+                    "reps": 8,
+                    "RPE": "n/a",
+                    "weight": 90
+                }
+            ]
+        },
+        {
+            "name": "GOOD MORNING",
+            "notes": "COMPLETE LAST SET, REST 15 SECONDS, THEN DO AS MANY sets OF 3 AS POSSIBLE WITH 15 SECONDS OF REST BETWEEN",
+            "sets": [
+                {
+                    "reps": 8,
+                    "RPE": "n/a",
+                    "weight": 70
+                },
+                {
+                    "reps": 8,
+                    "RPE": "n/a",
+                    "weight": 70
+                },
+                {
+                    "reps": 8,
+                    "RPE": "n/a",
+                    "weight": 70
+                }
+            ]
+        },
+        {
+            "name": "CONCENTRATION CURL",
+            "notes": "ON THE LAST SET DO SLOW ECCENTRICS, THEN HOLD THE STRETCH AFTER THE LAST REP FOR AS LONG AS POSSIBLE",
+            "sets": [
+                {
+                    "reps": 10,
+                    "RPE": "n/a",
+                    "weight": 18
+                },
+                {
+                    "reps": 10,
+                    "RPE": "n/a",
+                    "weight": 18
+                },
+                {
+                    "reps": 10,
+                    "RPE": "n/a",
+                    "weight": 18
+                }
+            ]
+        },
+        {
+            "name": "AB ROLLER",
+            "notes": "COMPLETE LAST SET, REST 15 SECONDS, THEN DO AS MANY sets OF 3 AS POSSIBLE WITH 15 SECONDS OF REST BETWEEN",
+            "sets": [
+                {
+                    "reps": 12,
+                    "RPE": "n/a",
+                    "weight": 0
+                },
+                {
+                    "reps": 12,
+                    "RPE": "n/a",
+                    "weight": 0
+                },
+                {
+                    "reps": 12,
+                    "RPE": "n/a",
+                    "weight": 0
+                }
+            ]
+        }
+    ],
+    [
+        {
+            "name": "BENCH PRESS",
+            "notes": "LAST SET REST 15 SECONDS, DO ANOTHER 2-3 reps, REST ANOTHER 15 SECONDS, DO ANOTHER 1-2 reps",
+            "sets": [
+                {
+                    "reps": 5,
+                    "RPE": "n/a",
+                    "weight": 80
+                },
+                {
+                    "reps": 5,
+                    "RPE": "n/a",
+                    "weight": 80
+                },
+                {
+                    "reps": 5,
+                    "RPE": "n/a",
+                    "weight": 80
+                }
+            ]
+        },
+        {
+            "name": "LEAN AWAY LAT RAISE",
+            "notes": "ON THE LAST SET DO SLOW ECCENTRICS, THEN HOLD THE STRETCH AFTER THE LAST REP FOR AS LONG AS POSSIBLE",
+            "sets": [
+                {
+                    "reps": 8,
+                    "RPE": "n/a",
+                    "weight": 20
+                },
+                {
+                    "reps": 8,
+                    "RPE": "n/a",
+                    "weight": 20
+                },
+                {
+                    "reps": 8,
+                    "RPE": "n/a",
+                    "weight": 20
+                }
+            ]
+        },
+        {
+            "name": "LEG EXTENSION",
+            "notes": "COMPLETE LAST SET, REST 15 SECONDS, THEN DO AS MANY sets OF 3 AS POSSIBLE WITH 15 SECONDS OF REST BETWEEN\"",
+            "sets": [
+                {
+                    "reps": 8,
+                    "RPE": "n/a",
+                    "weight": 120
+                },
+                {
+                    "reps": 8,
+                    "RPE": "n/a",
+                    "weight": 120
+                },
+                {
+                    "reps": 8,
+                    "RPE": "n/a",
+                    "weight": 120
+                }
+            ]
+        },
+        {
+            "name": "ROPE TRICEP PUSHDOWN",
+            "notes": "COMPLETE LAST SET, REST 15 SECONDS, THEN DO AS MANY sets OF 3 AS POSSIBLE WITH 15 SECONDS OF REST BETWEEN",
+            "sets": [
+                {
+                    "reps": 18,
+                    "RPE": "n/a",
+                    "weight": 42.5
+                },
+                {
+                    "reps": 18,
+                    "RPE": "n/a",
+                    "weight": 42.5
+                },
+                {
+                    "reps": 18,
+                    "RPE": "n/a",
+                    "weight": 42.5
+                }
+            ]
+        }
+    ],
+    [
+        {
+            "name": "CHEST SUPPORTED ROW",
+            "notes": "LAST SET REST 15 SECONDS, DO ANOTHER 2-3 reps, REST ANOTHER 15 SECONDS, DO ANOTHER 1-2 reps",
+            "sets": [
+                {
+                    "reps": 12,
+                    "RPE": "n/a",
+                    "weight": 82.5
+                },
+                {
+                    "reps": 12,
+                    "RPE": "n/a",
+                    "weight": 82.5
+                },
+                {
+                    "reps": 12,
+                    "RPE": "n/a",
+                    "weight": 82.5
+                }
+            ]
+        },
+        {
+            "name": "GOOD MORNING",
+            "notes": "ON THE LAST SET DO SLOW ECCENTRICS, THEN HOLD THE STRETCH AFTER THE LAST REP FOR AS LONG AS POSSIBLE",
+            "sets": [
+                {
+                    "reps": 8,
+                    "RPE": "n/a",
+                    "weight": 70
+                },
+                {
+                    "reps": 8,
+                    "RPE": "n/a",
+                    "weight": 70
+                },
+                {
+                    "reps": 8,
+                    "RPE": "n/a",
+                    "weight": 70
+                }
+            ]
+        },
+        {
+            "name": "STRAIGHT ARM PULLDOWN",
+            "notes": "ON THE LAST SET DO SLOW ECCENTRICS, THEN HOLD THE STRETCH AFTER THE LAST REP FOR AS LONG AS POSSIBLE",
+            "sets": [
+                {
+                    "reps": 12,
+                    "RPE": "n/a",
+                    "weight": 57.5
+                },
+                {
+                    "reps": 12,
+                    "RPE": "n/a",
+                    "weight": 57.5
+                },
+                {
+                    "reps": 12,
+                    "RPE": "n/a",
+                    "weight": 57.5
+                }
+            ]
+        },
+        {
+            "name": "BARBELL CURL",
+            "notes": "COMPLETE LAST SET, REST 15 SECONDS, THEN DO AS MANY sets OF 3 AS POSSIBLE WITH 15 SECONDS OF REST BETWEEN",
+            "sets": [
+                {
+                    "reps": 10,
+                    "RPE": "n/a",
+                    "weight": 35
+                },
+                {
+                    "reps": 10,
+                    "RPE": "n/a",
+                    "weight": 35
+                },
+                {
+                    "reps": 10,
+                    "RPE": "n/a",
+                    "weight": 35
+                }
+            ]
+        },
+        {
+            "name": "HANGING LEG RAISE",
+            "notes": "COMPLETE LAST SET, REST 15 SECONDS, THEN DO AS MANY sets OF 3 AS POSSIBLE WITH 15 SECONDS OF REST BETWEEN",
+            "sets": [
+                {
+                    "reps": 8,
+                    "RPE": "n/a",
+                    "weight": 0
+                },
+                {
+                    "reps": 8,
+                    "RPE": "n/a",
+                    "weight": 0
+                },
+                {
+                    "reps": 8,
+                    "RPE": "n/a",
+                    "weight": 0
+                }
+            ]
+        }
+    ]
 ]
