@@ -1,3 +1,7 @@
+* {
+    touch-action: none;
+}
+
 #root {
     scroll-snap-type: y mandatory;
     -webkit-scroll-snap-type: y mandatory;
